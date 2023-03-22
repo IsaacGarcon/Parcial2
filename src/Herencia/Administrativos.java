@@ -1,23 +1,26 @@
 package Herencia;
 
-public class Administrativos extends Persona{
+public class Administrativos extends Persona {
+    private String puesto;
+    private String horario;
+    private String departamento;
 
-    private String Puesto;
-    private String Horario;
-    private String Departamento;
-
-    public Administrativos (String nombre, String apellido, int edad, String Puesto, String Horario, String Departamento){
+    public Administrativos(String nombre, String apellido, int edad, String puesto, String horario, String departamento) {
         super(nombre, apellido, edad);
-        this.Puesto = Puesto;
-        this.Horario = Horario;
-        this.Departamento = Departamento;
+        this.puesto = puesto;
+        this.horario = horario;
+        this.departamento = departamento;
     }
-    public void mostrarDatos(){
-        System.out.println("Nombre: " + getNombre() +
-                "\nApellido: " + getApellido() +
-                "\nEdad: " + getEdad() +
-                "\nPuesto de trabajo: " + Puesto +
-                "\nHorario laboral: " + Horario +
-                "\nDepartamento: " + Departamento );
+
+    public String getPuesto() {
+        return puesto;
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public String getDepartamento() {
+        return departamento;
     }
 }
